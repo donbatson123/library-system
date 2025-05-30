@@ -1,5 +1,5 @@
-from app.database import SessionLocal
-from app.models import Book, Student, Checkout
+from database import SessionLocal
+from models import Book, Student, Checkout
 from datetime import date
 import random
 

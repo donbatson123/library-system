@@ -2,8 +2,8 @@ from pydantic import BaseModel
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from datetime import date
-from app.database import SessionLocal
-from app.models import Book, Checkout, Student
+from database import SessionLocal
+from models import Book, Checkout, Student
 
 router = APIRouter()
 

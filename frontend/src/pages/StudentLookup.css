@@ -1,0 +1,30 @@
+/* src/pages/StudentLookup.css */
+.student-lookup {
+  padding: 1.5rem;
+}
+
+.student-lookup input {
+  padding: 0.5rem;
+  width: 300px;
+  margin-right: 0.5rem;
+}
+
+.student-lookup button {
+  padding: 0.5rem 1rem;
+}
+
+.error {
+  color: red;
+  margin-top: 1rem;
+}
+
+.student-info {
+  margin-top: 2rem;
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+.student-info h4 {
+  margin-top: 1rem;
+}

@@ -1,6 +1,15 @@
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import CheckIn from './pages/CheckIn';
 import Checkout from './pages/Checkout';
+import AssetTrackerHome from './pages/AssetTracker/AssetTrackerHome';
+import DeviceCheckIn from './pages/AssetTracker/DeviceCheckIn';
+import DeviceCheckOut from './pages/AssetTracker/DeviceCheckOut';
+import DeviceStatus from './pages/AssetTracker/DeviceStatus';
+import DeviceSearch from './pages/AssetTracker/DeviceSearch';
+import DeviceHistory from './pages/AssetTracker/DeviceHistory';
+import AdminTools from './pages/AssetTracker/AdminTools';
+import StudentSummary from './pages/AssetTracker/StudentSummary';
+
 
 function App() {
   return (
@@ -19,6 +28,14 @@ function App() {
         } />
         <Route path="/checkin" element={<CheckIn />} />
         <Route path="/checkout" element={<Checkout />} />
+        <Route path="/asset" element={<AssetTrackerHome />} />
+        <Route path="/asset/checkin" element={<DeviceCheckIn />} />
+        <Route path="/asset/checkout" element={<DeviceCheckOut />} />
+        <Route path="/asset/status" element={<DeviceStatus />} />
+        <Route path="/asset/search" element={<DeviceSearch />} />
+        <Route path="/asset/history" element={<DeviceHistory />} />
+        <Route path="/asset/admin" element={<AdminTools />} />
+        <Route path="/asset/summary" element={<StudentSummary />} />
         {/* We'll create /search soon */}
       </Routes>
     </Router>

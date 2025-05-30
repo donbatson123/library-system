@@ -1,0 +1,18 @@
+/* frontend/src/pages/AssetTracker.css */
+.asset-tracker {
+  text-align: center;
+  padding: 2rem;
+}
+
+.asset-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.asset-buttons button {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+}

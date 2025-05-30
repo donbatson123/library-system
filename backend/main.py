@@ -1,8 +1,10 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from app.database import engine, Base
-from app.routes import checkin, checkout, status, search, admin
+from database import engine, Base
+from routes import checkin, checkout, status, search, admin, device_checkin
+import models  
 
+#Base.metadata.drop_all(bind=engine)
 Base.metadata.create_all(bind=engine)
 
 app = FastAPI(title="Library Circulation System")
@@ -16,6 +18,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+app.include_router(device_checkin.router, prefix="/devices")
 app.include_router(checkin.router, prefix="/checkin")
 app.include_router(checkout.router, prefix="/checkout")
 app.include_router(status.router, prefix="/status")
